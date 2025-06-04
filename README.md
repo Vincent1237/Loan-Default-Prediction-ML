@@ -11,12 +11,24 @@ Full-time Data Science Student | Moringa School
 This project presents an end-to-end machine learning pipeline to **predict loan default risk** using historical customer data. It is designed with business impact in mind and is targeted at financial institutions seeking data-driven solutions to minimize Non-Performing Loans (NPLs).
 
 
-##  Business Objective
+## Business and Data Understanding
 
-To develop a predictive model that helps banks:
-- Identify likely loan defaulters before disbursement.
-- Improve risk-based pricing models.
-- Support proactive recovery and early intervention strategies.
+### Stakeholder Audience
+The primary audience for this project includes:
+- Credit Risk Managers
+- Lending Officers
+- Banking Executives
+- Data Strategy Teams in Financial Institutions
+
+These stakeholders aim to enhance their credit assessment process and reduce losses arising from loan defaults.
+
+
+### Dataset Choice
+The dataset used includes **10,000 customer records** with financial and demographic variables relevant to credit risk evaluation. Key variables include:
+
+- `Employed`: Employment status (binary)
+- `Bank Balance`, `Loan Amount`, `Annual Salary`, `Savings Rate`
+- `Defaulted?`: Target variable indicating if a customer defaulted
 
 
 ## Problem Statements
@@ -26,50 +38,57 @@ To develop a predictive model that helps banks:
 3. Which model performs better between **Logistic Regression** and **Decision Tree**?
 
 
-##  Dataset Description
+## Modeling
 
-The dataset contains **10,000 records** with customer financial indicators.  
-Key features include:
-- `Employed`: Employment status (binary)
-- `Bank Balance`, `Loan Amount`, `Income`, `Savings Rate`
-- `Defaulted?`: Target variable (1 = Defaulted, 0 = Not Defaulted)
+The following steps were used to develop and train the models:
 
+- Data cleaning and handling of missing values
+- Exploratory Data Analysis (EDA)
+- Feature Engineering (e.g., encoding employment, creating savings rate)
+- Train-test split using stratification
+- Model training with:
+  - Logistic Regression (baseline)
+  - Decision Tree Classifier
+- Addressed class imbalance using **SMOTE**
+- Hyperparameter tuning for Decision Tree
 
-## Workflow Summary
+---
 
-1. **Data Cleaning & Exploration**
-2. **Feature Engineering**
-3. **Train-Test Split**
-4. **Modeling** (Logistic Regression & Decision Tree)
-5. **Handling Class Imbalance using SMOTE**
-6. **Model Evaluation using Accuracy, Precision, Recall, F1 Score, ROC AUC**
-7. **Recommendations**
+## Evaluation
 
+Model performance was evaluated using:
+- Accuracy
+- Precision
+- Recall
+- F1 Score
+- ROC AUC
 
-##  Results Summary
+**Key results:**
+- Logistic Regression showed high accuracy but failed to detect defaulters (low recall).
+- Decision Tree, after applying SMOTE, achieved significantly better recall and F1-score.
 
-- Logistic Regression had high accuracy but very low recall.
-- After applying **SMOTE**, recall improved significantly for Decision Trees.
-- Decision Tree outperformed in identifying actual defaulters (higher recall and F1).
+---
 
+## Conclusion
 
-## Key Takeaways
+The Decision Tree model provided the best balance of performance and interpretability, especially after handling class imbalance with SMOTE. This model is well-suited for deployment in credit risk workflows to:
+- Flag high-risk borrowers early
+- Support risk-based pricing
+- Reduce non-performing loans
 
-- SMOTE effectively addressed class imbalance.
-- Decision Tree provided better interpretability and actionable insights.
-- The model supports proactive decision-making for credit risk teams.
+This project demonstrates how machine learning can enhance lending strategies through data-driven insights.
 
+---
 
-##  File Structure
+## File Structure
 
-loan_default_prediction.ipynb   # Main Jupyter Notebook
+- `loan_default_prediction.ipynb` – Main Jupyter Notebook
+- `resampled_train_data.csv` – (Optional) Exported dataset with SMOTE applied
+- `README.md` – Project documentation
 
-resampled_train_data.csv        # (Optional) Exported SMOTE dataset
-
-README.ipynb                    # This file
-
+---
 
 ## Contacts
- 
-vbarchok@gmail.com  
-[LinkedIn](https://www.linkedin.com/in/vincent-ngochoch-94095b64)
+
+📧 vbarchok@gmail.com  
+🔗 [LinkedIn Profile](https://www.linkedin.com/in/vincent-ngochoch-94095b64)
