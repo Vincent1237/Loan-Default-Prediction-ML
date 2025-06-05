@@ -24,7 +24,7 @@ These stakeholders aim to enhance their credit assessment process and reduce los
 
 
 ### Dataset Choice
-The dataset used includes **10,000 customer records** with financial and demographic variables relevant to credit risk evaluation. Key variables include:
+The dataset used includes **10,000 customer records** from  **KAGGLE DATASET** with financial and demographic variables relevant to credit risk evaluation. Key variables include:
 
 - `Employed`: Employment status (binary)
 - `Bank Balance`, `Loan Amount`, `Annual Salary`, `Savings Rate`
